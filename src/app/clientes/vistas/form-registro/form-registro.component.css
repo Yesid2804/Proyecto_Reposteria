@@ -1,0 +1,14 @@
+.formularioRegistro{
+    float: inline-start;
+    justify-content: right;
+    align-items: right;
+    left: 20px;
+    position: relative;
+    top: 40px;
+    color: black;
+    width: 1300px;
+}
+.botonConfirmar{
+    background-color: rgb(255, 171, 171) !important;
+    color: white;
+}

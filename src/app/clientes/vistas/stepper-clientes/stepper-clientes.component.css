@@ -1,0 +1,29 @@
+.mat-stepper-horizontal {
+    margin-top: 75px;
+  }
+  
+  .mat-form-field {
+    margin-top: 20px;
+  }
+  
+  table {
+    width: 100%;
+  }
+  .mat-elevation-z8{
+    border-top: 1px solid;
+  }
+  .strepper{
+    position: relative;
+    height: 693px;
+    width: 1349px;
+  }
+
+  .listaConfirmacicion{
+    float: right;
+  }
+
+  .botonContinuar{
+    background-color: rgb(255, 171, 171) !important;
+    color: white;
+}
+  

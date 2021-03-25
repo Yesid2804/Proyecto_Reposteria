@@ -1,7 +1,14 @@
 .navbar{
-    background-color: rgba(255, 255, 255, 0) !important; 
+    background-color: rgb(255, 171, 171) !important;
     color: white;
-    border: 0px solid;
+    opacity: 0.9;
+    border: 1px solid;
+    font-weight: bold;
+    position: absolute;
+    
+}
+.mat-menu-content:not(:empty){
+    margin-top: 20px;
 }
 .carousel-item{
     height: 100vh;
@@ -9,6 +16,8 @@
     background: no-repeat center center scroll;
     -webkit-background-size: cover ;
     background-size: cover ;
+    font-weight: bold;
+
 }
 .carousel-caption{
     bottom: 220px;
@@ -18,7 +27,7 @@
     font-family: Georgia;
     font-size: 8px ;
     text-transform: uppercase;
-    font-weight: bold;
+    
 }
 
 .buttonNavbar{
@@ -31,4 +40,7 @@
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 2px;
+}
+.mat-menu-content:not(:empty){
+    width: 720px !important;
 }

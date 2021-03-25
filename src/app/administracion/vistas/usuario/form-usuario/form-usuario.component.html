@@ -4,15 +4,15 @@
   </div>
   <div class="example-container mt-3 inputs">
     <mat-form-field appearance="fill" >
-        <mat-label>Nombre de usuario</mat-label>
+        <mat-label class="inputs">Nombre de usuario</mat-label>
         <input matInput >
     </mat-form-field>
   </div>
       
   <div class="example-container inputs">
           <mat-form-field appearance="fill" >
-            <mat-label >Contraseña</mat-label>
-            <input matInput  [type]="hide ? 'password' : 'text'" >
+            <mat-label class="inputs">Contraseña</mat-label>
+            <input matInput  [type]="hide ? 'password' : 'text'" class="inputs" >
             <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
             <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
             </button>
@@ -25,6 +25,6 @@
               </div>
             </section>
             <div class="col-12 form-group ">
-            <a href="#" class="aRecordarContraseña">Recordar contraseña</a>
+            <a href="#" class="aRecordarContraseña"><b>Recordar contraseña</b> </a>
   </div>
 </div>

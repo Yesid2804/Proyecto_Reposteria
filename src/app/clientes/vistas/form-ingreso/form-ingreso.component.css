@@ -1,0 +1,15 @@
+.h2{
+    text-align: center;
+}
+.formulario{
+    float: left;
+    justify-content: left;
+    border-right: 1px solid ; 
+    color: black;
+    width: 650px;
+}
+
+.botonIngresar{
+    background-color: rgb(255, 171, 171) !important;
+    color: white;
+}

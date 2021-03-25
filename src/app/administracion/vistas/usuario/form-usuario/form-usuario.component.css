@@ -16,12 +16,12 @@
   }
   .botonAgregar{
     color: white;
-    background: blue;
+    background: white;
 }
 
 .contenedor{
   max-width: 100%;
-  background-color: #E9D8DF;
+  background-color: rgba(rgb(230, 230, 230));
   opacity: .99;
   padding: 0 20px;
   border: 1px solid white;
@@ -30,6 +30,7 @@
 }
 .aRecordarContraseña{
   color: #0c62bf;
+
 }
 .user-img{
   margin-top: 100px;
@@ -38,4 +39,7 @@
 .user-img img{
   width: 100px;
   height: 100px;
+}
+.inputs{
+  color: white;
 }

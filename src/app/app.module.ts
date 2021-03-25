@@ -50,8 +50,18 @@ import { CarouselModule, WavesModule } from 'angular-bootstrap-md';
 import { NavbarClientesComponent } from './clientes/vistas/navbar-clientes/navbar-clientes.component';
 import { CarouselComponent } from './clientes/vistas/carousel/carousel.component';
 import { ProductosService } from './administracion/vistas/productos/productos.service';
- 
-
+import {MatMenuModule} from '@angular/material/menu';
+import { RegistroEIngresoComponent } from './clientes/vistas/registro-eingreso/registro-eingreso.component';
+import { FormIngresoComponent } from './clientes/vistas/form-ingreso/form-ingreso.component';
+import { FormRegistroComponent } from './clientes/vistas/form-registro/form-registro.component';
+import { NavbarProductosComponent } from './clientes/vistas/navbar-productos/navbar-productos.component';
+import { CarouselProductosComponent } from './clientes/vistas/carousel-productos/carousel-productos.component';
+import { CarritoComponent } from './clientes/vistas/carrito/carrito.component';
+import { MatStepperModule } from '@angular/material/stepper';
+import { StepperClientesComponent } from './clientes/vistas/stepper-clientes/stepper-clientes.component';
+import {MatTableModule} from '@angular/material/table';
+import { TableDatosClientesComponent } from './clientes/vistas/table-datos-clientes/table-datos-clientes.component';
+import { TableResumenCompraComponent } from './clientes/vistas/table-resumen-compra/table-resumen-compra.component';
 
 @NgModule({
   imports: [
@@ -75,6 +85,10 @@ import { ProductosService } from './administracion/vistas/productos/productos.se
     MatNativeDateModule,
     CarouselModule,
     WavesModule,
+    MatMenuModule,
+    MatStepperModule,
+    MatTableModule,
+
     AgmCoreModule.forRoot({
       apiKey: 'YOUR_GOOGLE_MAPS_API_KEY'
     })
@@ -100,6 +114,15 @@ import { ProductosService } from './administracion/vistas/productos/productos.se
     InicioComponent,
     NavbarClientesComponent,
     CarouselComponent,
+    RegistroEIngresoComponent,
+    FormIngresoComponent,
+    FormRegistroComponent,
+    NavbarProductosComponent,
+    CarouselProductosComponent,
+    CarritoComponent,
+    StepperClientesComponent,
+    TableDatosClientesComponent,
+    TableResumenCompraComponent,
   ],
   providers: [ProductosService],
   bootstrap: [AppComponent]

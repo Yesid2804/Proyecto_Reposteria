@@ -20,7 +20,6 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { CarouselModule, WavesModule } from 'angular-bootstrap-md';
 import {MatDividerModule} from '@angular/material/divider';
 
-
 @NgModule({
   imports: [
     CommonModule,
@@ -36,7 +35,7 @@ import {MatDividerModule} from '@angular/material/divider';
     MatNativeDateModule,
     CarouselModule,
     MatDividerModule,
-    WavesModule
+    WavesModule,
   ],
   declarations: [
     DashboardComponent,
@@ -49,4 +48,6 @@ import {MatDividerModule} from '@angular/material/divider';
   ]
 })
 
-export class AdminLayoutModule {}
+export class AdminLayoutModule {
+
+}

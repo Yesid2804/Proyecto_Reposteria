@@ -5,6 +5,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { UsuarioComponent } from './administracion/vistas/usuario/usuario.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { InicioComponent } from './clientes/vistas/inicio/inicio.component';
+import { RegistroEIngresoComponent } from './clientes/vistas/registro-eingreso/registro-eingreso.component';
+import { CarritoComponent } from './clientes/vistas/carrito/carrito.component';
 
 
 const routes: Routes =[
@@ -21,6 +23,15 @@ const routes: Routes =[
     path: 'inicio',
     component: InicioComponent,
   },
+  {
+    path: 'registro-eingreso',
+    component: RegistroEIngresoComponent,
+  },
+  {
+    path: 'carrito',
+    component: CarritoComponent,
+  },
+
 
   {
     

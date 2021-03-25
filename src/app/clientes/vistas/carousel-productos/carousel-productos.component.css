@@ -1,0 +1,29 @@
+
+
+.carousel{
+    z-index: -40;
+}
+.carrouseles{
+    height: 657px;
+    width: 50px;
+}
+.carouselProductos{
+    height: 768px;
+}
+.cards{
+    height: 768px;
+
+}
+.card-img-top{
+    height: 300px;
+    width: 308px;
+}
+.btnAgregarAlCarrito{
+    background-color: rgb(253, 155, 155) !important;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    float: inline-start;
+    height: auto;
+    
+}
