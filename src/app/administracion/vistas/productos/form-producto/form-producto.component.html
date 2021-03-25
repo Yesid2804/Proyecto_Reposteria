@@ -1,0 +1,37 @@
+<h2 class="titleModal col-12" style="font-family: 'Work Sans Black'">{{titulo}} 
+<span (click)="cerrarModal()" class="material-icons float-right bottonCerrar">clear</span>
+
+</h2>
+
+<form>
+    <div class="row contentModal">
+        <div class="col-md-6">
+            <mat-form-field class="example-full-width">
+            <input [(ngModel)]="formProducto.nombre" name="nombre"  matInput placeholder="Nombre">
+            </mat-form-field>
+        </div>
+        <mat-form-field appearance="fill" class="col-md-6">
+            <mat-label>Categoria</mat-label>
+            <mat-select [(ngModel)]="formProducto.categoria" name="categoria">
+              <mat-option *ngFor="let food of foods" [value]="food.value">
+                {{food.viewValue}}
+              </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <div class="col-md-6">
+            <mat-form-field class="example-full-width">
+            <input [(ngModel)]="formProducto.costo" name="costo" type="number" matInput placeholder="Costo" value="$">
+            </mat-form-field>
+        </div>
+        <div class="example-form col-md-6" >
+            <mat-form-field class="example-full-width">
+              <mat-label>Descripcion</mat-label>
+              <textarea [(ngModel)]="formProducto.descripcion" name="descripcion" matInput placeholder="Ejemplo: Elaborado con masa de harina..."></textarea>
+            </mat-form-field>
+        </div>
+        <div class="col-md-12 ">
+            <button mat-raised-button class="float-right botonAgregar" (click)="guardarProducto()">Guardar</button>
+        </div>
+    </div>
+</form>

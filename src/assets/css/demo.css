@@ -1,0 +1,63 @@
+/*!
+
+=========================================================
+* Material Dashboard Angular - v2.4.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/material-dashboard-angular2
+* Copyright 2019 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://github.com/creativetimofficial/material-dashboard-angular2/blob/master/LICENSE.md)
+
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+*/
+.tim-typo{
+  padding-left: 25%;
+  margin-bottom: 40px;
+  position: relative;
+  width: 100%;
+}
+.tim-typo .tim-note{
+  bottom: 5px;
+  color: #c0c1c2;
+  display: block;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  left: 0;
+  margin-left: 20px;
+  position: absolute;
+  width: 260px;
+}
+
+.mat-dialog-container {
+  display: block;
+  padding: 0px !important;
+  margin: 20px !important;
+  border-radius: 4px;
+  box-sizing: border-box;
+  overflow: auto;
+  outline: 0;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  max-height: inherit;
+}
+
+.titleModal {
+  background-color: #3366cc;
+  color: #fff;
+  margin: 0px;
+  padding: 15px;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.contentModal{
+  padding: 20px;
+  margin: 0;
+}

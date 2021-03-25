@@ -1,0 +1,53 @@
+<div class="main-content mt-4">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <button mat-raised-button class="float-right  botonAgregar" (click)="openDialog()" >{{nombreBotonAgregar}}</button>
+            </div>
+        </div>
+        <div class="row" >
+            <div class="col-md-12">
+                <div class="card" >
+                    <div class="card-header card-header-warning">
+                        <h4 class="card-title ">{{titulo}}</h4>
+                    </div>
+                    
+                    <div class="row ml-2 mt-3">
+                        <div class="col-md-3 ">
+                          <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Buscar" type="text">
+                          </mat-form-field>
+                        </div>
+                    </div>
+                    
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table ">
+                                <thead class="text-warning">
+                                    <th *ngFor="let colum of columns">
+                                        {{colum.columna}}
+                                    </th>
+                                    <th class="text-right">
+                                        Opciones
+                                    </th>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let item of data ">
+                                        <td *ngFor="let colum of columns">
+                                            {{item[colum.indice]}}
+                                        </td>
+                                        <td class="text-right ">
+                                            <i class="material-icons text-info botonTabla mr-3">edit</i>
+                                            <i class="material-icons text-danger botonTabla">delete</i>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  

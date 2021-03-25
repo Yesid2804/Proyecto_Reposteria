@@ -1,0 +1,30 @@
+<div class="contenedor">
+  <div class="col-12 user-img">
+      <img src="/assets/img/user4.png"/>
+  </div>
+  <div class="example-container mt-3 inputs">
+    <mat-form-field appearance="fill" >
+        <mat-label>Nombre de usuario</mat-label>
+        <input matInput >
+    </mat-form-field>
+  </div>
+      
+  <div class="example-container inputs">
+          <mat-form-field appearance="fill" >
+            <mat-label >Contraseña</mat-label>
+            <input matInput  [type]="hide ? 'password' : 'text'" >
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+          
+          <mat-divider></mat-divider>
+          <section>
+              <div class="col-md-12 ">
+                  <button  mat-raised-button class="btn btn-primary botonAgregar" > <i class="fas fa-sign-in-alt"></i>Ingresar</button>
+              </div>
+            </section>
+            <div class="col-12 form-group ">
+            <a href="#" class="aRecordarContraseña">Recordar contraseña</a>
+  </div>
+</div>

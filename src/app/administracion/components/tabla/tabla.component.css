@@ -1,0 +1,10 @@
+.botonAgregar{
+    float: right;
+}
+.botonTabla{
+    cursor: pointer;
+}
+.botonAgregar{
+    background-color: #3366CC;
+    color: white;
+}

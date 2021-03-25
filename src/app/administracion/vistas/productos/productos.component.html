@@ -1,0 +1,11 @@
+
+<app-tabla
+    titulo="Productos"
+    nombreBotonAgregar="Agregar producto"
+    [data]="productos"
+    [columns]="columns"
+    (showModal)="showRegistrarProducto()"
+    (showModalEditar)="showEditarProducto($event)"
+    (eliminar)="eliminar($event)"
+>
+</app-tabla>
