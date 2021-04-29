@@ -4,6 +4,7 @@ import { Producto } from 'app/administracion/models/producto';
 import { ProductosService } from '../productos.service';
 import { v4 as uuidv4 } from 'uuid';
 import Swal from 'sweetalert2'
+
 declare var $: any;
 interface Food {
   value: string;
@@ -25,6 +26,7 @@ export class FormProductoComponent implements OnInit {
     nombre: '',
     categoria: '',
     costo: null,
+    descripcion: ''
   }
   constructor(
     public dialogRef: MatDialogRef<FormProductoComponent>,
@@ -49,7 +51,6 @@ export class FormProductoComponent implements OnInit {
       this.titulo = "Editar producto"
       this.formProducto = this.dataModal.producto;
     }
-      
   }
 
   cerrarModal(){

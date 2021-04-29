@@ -1,5 +1,5 @@
-<mdb-carousel class="carousel slide carousel-fade " [animation]="'fade'">
-    <mdb-carousel-item class="ml-6">
+<mdb-carousel class="carousel slide carousel-fade " [animation]="'fade'" name="tortasYPostres">
+    <mdb-carousel-item class="ml-6" *ngIf="activarCarousel==1">
         <div class="col-md-3 carouselProductos" style="float:left">
             <div class="card mb-2 cards ">
                <img class="card-img-top"
@@ -51,10 +51,9 @@
                </div>
              </div>
            </div>
-
   </mdb-carousel-item>
 
-  <mdb-carousel-item class="ml-6">
+  <mdb-carousel-item class="ml-6" *ngIf="activarCarousel==1" name="tortasYPostres">
     <div class="col-md-3 carouselProductos" style="float:left">
       <div class="card mb-2 cards">
          <img class="card-img-top"
@@ -68,9 +67,227 @@
        </div>
      </div>
     
+    <div class="col-md-3 carouselProductos" style="float:left">
+      <div class="card mb-2 cards">
+         <img class="card-img-top"
+           src="/assets/img/productos/tortas/producto13.jpg" alt="Card image cap">
+         <div class="card-body">
+           <h4 class="card-title">Torta de Miel</h4>
+           <p class="card-text">La torta de miel es exquisita para acompañar con un queso suave como el queso guayanès, queso telita,
+              o queso paisa, ya que su sabor dulce</p>
+           <a class="btn  btnAgregarAlCarrito">Agregar al Carrito</a>
+         </div>
+       </div>
+     </div>
   </mdb-carousel-item>
-  <mdb-carousel-item class="ml-6">
+
+  <mdb-carousel-item class="ml-6" *ngIf="activarCarousel==2" name="combos">
+    <div class="col-md-3 carouselProductos" style="float:left">
+      <div class="card mb-2 cards">
+         <img class="card-img-top"
+           src="/assets/img/productos/tortas/producto13.jpg" alt="Card image cap">
+         <div class="card-body">
+           <h4 class="card-title">Torta de Miel</h4>
+           <p class="card-text">La torta de miel es exquisita para acompañar con un queso suave como el queso guayanès, queso telita,
+              o queso paisa, ya que su sabor dulce</p>
+           <a class="btn  btnAgregarAlCarrito">Agregar al Carrito</a>
+         </div>
+       </div>
+     </div>
     
+    <div class="col-md-3 carouselProductos" style="float:left">
+      <div class="card mb-2 cards">
+         <img class="card-img-top"
+           src="/assets/img/productos/tortas/producto9.jpg" alt="Card image cap">
+         <div class="card-body">
+           <h4 class="card-title">Torta de Miel</h4>
+           <p class="card-text">La torta de miel es exquisita para acompañar con un queso suave como el queso guayanès, queso telita,
+              o queso paisa, ya que su sabor dulce</p>
+           <a class="btn  btnAgregarAlCarrito">Agregar al Carrito</a>
+         </div>
+       </div>
+     </div>
   </mdb-carousel-item>
+
+  
+  <mdb-carousel-item class="ml-6" *ngIf="activarCarousel==3" name="regalos">
+    <div class="col-md-3 carouselProductos" style="float:left">
+      <div class="card mb-2 cards">
+         <img class="card-img-top"
+           src="/assets/img/productos/cupcakes/producto1.jpg" alt="Card image cap">
+         <div class="card-body">
+           <h4 class="card-title">Torta de Miel</h4>
+           <p class="card-text">La torta de miel es exquisita para acompañar con un queso suave como el queso guayanès, queso telita,
+              o queso paisa, ya que su sabor dulce</p>
+           <a class="btn  btnAgregarAlCarrito">Agregar al Carrito</a>
+         </div>
+       </div>
+     </div>
     
+    <div class="col-md-3 carouselProductos" style="float:left">
+      <div class="card mb-2 cards">
+         <img class="card-img-top"
+           src="/assets/img/productos/tortas/producto13.jpg" alt="Card image cap">
+         <div class="card-body">
+           <h4 class="card-title">Torta de Miel</h4>
+           <p class="card-text">La torta de miel es exquisita para acompañar con un queso suave como el queso guayanès, queso telita,
+              o queso paisa, ya que su sabor dulce</p>
+           <a class="btn  btnAgregarAlCarrito">Agregar al Carrito</a>
+         </div>
+       </div>
+     </div>
+  </mdb-carousel-item>
+
+  <mdb-carousel-item class="ml-6" *ngIf="activarCarousel==4" name="panes">
+    <div class="col-md-3 carouselProductos" style="float:left">
+      <div class="card mb-2 cards">
+         <img class="card-img-top"
+           src="/assets/img/productos/panes/producto1.jpg" alt="Card image cap">
+         <div class="card-body">
+           <h4 class="card-title">Torta de Miel</h4>
+           <p class="card-text">La torta de miel es exquisita para acompañar con un queso suave como el queso guayanès, queso telita,
+              o queso paisa, ya que su sabor dulce</p>
+           <a class="btn  btnAgregarAlCarrito">Agregar al Carrito</a>
+         </div>
+       </div>
+     </div>
+    
+    <div class="col-md-3 carouselProductos" style="float:left">
+      <div class="card mb-2 cards">
+         <img class="card-img-top"
+           src="/assets/img/productos/panes/producto2.jpg" alt="Card image cap">
+         <div class="card-body">
+           <h4 class="card-title">Torta de Miel</h4>
+           <p class="card-text">La torta de miel es exquisita para acompañar con un queso suave como el queso guayanès, queso telita,
+              o queso paisa, ya que su sabor dulce</p>
+           <a class="btn  btnAgregarAlCarrito">Agregar al Carrito</a>
+         </div>
+       </div>
+     </div>
+  </mdb-carousel-item>
+  <mdb-carousel-item class="ml-6" *ngIf="activarCarousel==4" name="panes">
+    <div class="col-md-3 carouselProductos" style="float:left">
+      <div class="card mb-2 cards">
+         <img class="card-img-top"
+           src="/assets/img/productos/panes/producto1.jpg" alt="Card image cap">
+         <div class="card-body">
+           <h4 class="card-title">Torta de Miel</h4>
+           <p class="card-text">La torta de miel es exquisita para acompañar con un queso suave como el queso guayanès, queso telita,
+              o queso paisa, ya que su sabor dulce</p>
+           <a class="btn  btnAgregarAlCarrito">Agregar al Carrito</a>
+         </div>
+       </div>
+     </div>
+    
+    <div class="col-md-3 carouselProductos" style="float:left">
+      <div class="card mb-2 cards">
+         <img class="card-img-top"
+           src="/assets/img/productos/panes/producto2.jpg" alt="Card image cap">
+         <div class="card-body">
+           <h4 class="card-title">Torta de Miel</h4>
+           <p class="card-text">La torta de miel es exquisita para acompañar con un queso suave como el queso guayanès, queso telita,
+              o queso paisa, ya que su sabor dulce</p>
+           <a class="btn  btnAgregarAlCarrito">Agregar al Carrito</a>
+         </div>
+       </div>
+     </div>
+  </mdb-carousel-item>
+
+  <mdb-carousel-item class="ml-6" *ngIf="activarCarousel==5" name="celebracion">
+    <div class="col-md-3 carouselProductos" style="float:left">
+      <div class="card mb-2 cards">
+         <img class="card-img-top"
+           src="/assets/img/productos/celebracion/producto1.jpg" alt="Card image cap">
+         <div class="card-body">
+           <h4 class="card-title">Torta de Miel</h4>
+           <p class="card-text">La torta de miel es exquisita para acompañar con un queso suave como el queso guayanès, queso telita,
+              o queso paisa, ya que su sabor dulce</p>
+           <a class="btn  btnAgregarAlCarrito">Agregar al Carrito</a>
+         </div>
+       </div>
+     </div>
+    
+    <div class="col-md-3 carouselProductos" style="float:left">
+      <div class="card mb-2 cards">
+         <img class="card-img-top"
+           src="/assets/img/productos/celebracion/producto2.jpg" alt="Card image cap">
+         <div class="card-body">
+           <h4 class="card-title">Torta de Miel</h4>
+           <p class="card-text">La torta de miel es exquisita para acompañar con un queso suave como el queso guayanès, queso telita,
+              o queso paisa, ya que su sabor dulce</p>
+           <a class="btn  btnAgregarAlCarrito">Agregar al Carrito</a>
+         </div>
+       </div>
+     </div>
+  </mdb-carousel-item>
+
+  <mdb-carousel-item class="ml-6" *ngIf="activarCarousel==6" name="bebidas">
+    <div class="col-md-3 carouselProductos" style="float:left">
+      <div class="card mb-2 cards">
+         <img class="card-img-top"
+           src="/assets/img/productos/panes/producto1.jpg" alt="Card image cap">
+         <div class="card-body">
+           <h4 class="card-title">Torta de Miel</h4>
+           <p class="card-text">La torta de miel es exquisita para acompañar con un queso suave como el queso guayanès, queso telita,
+              o queso paisa, ya que su sabor dulce</p>
+           <a class="btn  btnAgregarAlCarrito">Agregar al Carrito</a>
+         </div>
+       </div>
+     </div>
+    
+    <div class="col-md-3 carouselProductos" style="float:left">
+      <div class="card mb-2 cards">
+         <img class="card-img-top"
+           src="/assets/img/productos/panes/producto2.jpg" alt="Card image cap">
+         <div class="card-body">
+           <h4 class="card-title">Torta de Miel</h4>
+           <p class="card-text">La torta de miel es exquisita para acompañar con un queso suave como el queso guayanès, queso telita,
+              o queso paisa, ya que su sabor dulce</p>
+           <a class="btn  btnAgregarAlCarrito">Agregar al Carrito</a>
+         </div>
+       </div>
+     </div>
+  </mdb-carousel-item>
+  
+  <mdb-carousel-item class="ml-6" *ngIf="activarCarousel==7" name="antojos">
+    <div class="col-md-3 carouselProductos" style="float:left">
+      <div class="card mb-2 cards">
+         <img class="card-img-top"
+           src="/assets/img/productos/antojos/producto1.jpg" alt="Card image cap">
+         <div class="card-body">
+           <h4 class="card-title">Torta de Miel</h4>
+           <p class="card-text">La torta de miel es exquisita para acompañar con un queso suave como el queso guayanès, queso telita,
+              o queso paisa, ya que su sabor dulce</p>
+           <a class="btn  btnAgregarAlCarrito">Agregar al Carrito</a>
+         </div>
+       </div>
+     </div>
+    
+    <div class="col-md-3 carouselProductos" style="float:left">
+      <div class="card mb-2 cards">
+         <img class="card-img-top"
+           src="/assets/img/productos/antojos/producto2.jpg" alt="Card image cap">
+         <div class="card-body">
+           <h4 class="card-title">Torta de Miel</h4>
+           <p class="card-text">La torta de miel es exquisita para acompañar con un queso suave como el queso guayanès, queso telita,
+              o queso paisa, ya que su sabor dulce</p>
+           <a class="btn  btnAgregarAlCarrito">Agregar al Carrito</a>
+         </div>
+       </div>
+     </div>
+
+     <div class="col-md-3 carouselProductos" style="float:left">
+      <div class="card mb-2 cards">
+         <img class="card-img-top"
+           src="/assets/img/productos/antojos/producto3.jpg" alt="Card image cap">
+         <div class="card-body">
+           <h4 class="card-title">Torta de Miel</h4>
+           <p class="card-text">La torta de miel es exquisita para acompañar con un queso suave como el queso guayanès, queso telita,
+              o queso paisa, ya que su sabor dulce</p>
+           <a class="btn  btnAgregarAlCarrito">Agregar al Carrito</a>
+         </div>
+       </div>
+     </div>
+  </mdb-carousel-item>
+  
 </mdb-carousel>

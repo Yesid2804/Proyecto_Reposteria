@@ -62,6 +62,7 @@ import { StepperClientesComponent } from './clientes/vistas/stepper-clientes/ste
 import {MatTableModule} from '@angular/material/table';
 import { TableDatosClientesComponent } from './clientes/vistas/table-datos-clientes/table-datos-clientes.component';
 import { TableResumenCompraComponent } from './clientes/vistas/table-resumen-compra/table-resumen-compra.component';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   imports: [
@@ -124,7 +125,7 @@ import { TableResumenCompraComponent } from './clientes/vistas/table-resumen-com
     TableDatosClientesComponent,
     TableResumenCompraComponent,
   ],
-  providers: [ProductosService],
+  providers: [ProductosService,CookieService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

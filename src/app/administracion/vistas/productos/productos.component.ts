@@ -31,6 +31,7 @@ export class ProductosComponent implements OnInit {
       nombre: 'Gaseosas',
       categoria: 'Bebidas',
       costo: 20000,
+      descripcion:''
     }
   ]
 

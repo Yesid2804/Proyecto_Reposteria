@@ -43,3 +43,12 @@
 .navbar-expand-lg{
     text-align: center;
 }
+.nav-link{
+    cursor: pointer;
+}
+
+
+.no{
+    background-color: rgb(255, 105, 105) !important;
+
+}

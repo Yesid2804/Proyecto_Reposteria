@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit,Output,EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-inicio',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./inicio.component.css']
 })
 export class InicioComponent implements OnInit {
+
+  @Output() categoriaClicked = new EventEmitter<boolean>();
 
   constructor() { }
 
