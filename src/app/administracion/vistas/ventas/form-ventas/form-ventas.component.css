@@ -1,0 +1,13 @@
+.bottonCerrar{
+    cursor: pointer;
+}
+.buttons{
+    background-color: #3366CC;
+    color: white;
+    float: right;
+    margin-left: 10px;
+    margin-top: 50px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+

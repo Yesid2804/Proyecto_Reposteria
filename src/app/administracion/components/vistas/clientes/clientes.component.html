@@ -1,8 +1,10 @@
 <app-tabla
     titulo="Clientes"
     nombreBotonAgregar="Agregar Clientes"
-    [data]="productos"
+    [data]="listCliente"
     [columns]="columns"
-    (showModal)="showRegistrarProducto()"
+    (showModal)="showRegistrarCliente()"
+    (showModalEditar)="showEditarCliente($event)"
+    (eliminar)="eliminar($event)"
 >
 </app-tabla>

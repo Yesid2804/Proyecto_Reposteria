@@ -51,24 +51,23 @@ import { NavbarClientesComponent } from './clientes/vistas/navbar-clientes/navba
 import { CarouselComponent } from './clientes/vistas/carousel/carousel.component';
 import { ProductosService } from './administracion/vistas/productos/productos.service';
 import {MatMenuModule} from '@angular/material/menu';
-import { RegistroEIngresoComponent } from './clientes/vistas/registro-eingreso/registro-eingreso.component';
 import { FormIngresoComponent } from './clientes/vistas/form-ingreso/form-ingreso.component';
 import { FormRegistroComponent } from './clientes/vistas/form-registro/form-registro.component';
 import { NavbarProductosComponent } from './clientes/vistas/navbar-productos/navbar-productos.component';
 import { CarouselProductosComponent } from './clientes/vistas/carousel-productos/carousel-productos.component';
 import { CarritoComponent } from './clientes/vistas/carrito/carrito.component';
 import { MatStepperModule } from '@angular/material/stepper';
-import { StepperClientesComponent } from './clientes/vistas/stepper-clientes/stepper-clientes.component';
 import {MatTableModule} from '@angular/material/table';
-import { TableDatosClientesComponent } from './clientes/vistas/table-datos-clientes/table-datos-clientes.component';
-import { TableResumenCompraComponent } from './clientes/vistas/table-resumen-compra/table-resumen-compra.component';
 import { CookieService } from 'ngx-cookie-service';
+import { VentasComponent } from './administracion/vistas/ventas/ventas.component';
+import { TablaVentasComponent } from './administracion/components/tabla-ventas/tabla-ventas.component';
+import { FormVentasComponent } from './administracion/vistas/ventas/form-ventas/form-ventas.component';
 
 @NgModule({
   imports: [
     BrowserAnimationsModule,
-    FormsModule,
     ReactiveFormsModule,
+    FormsModule,
     HttpClientModule,
     ComponentsModule,
     RouterModule,
@@ -115,15 +114,14 @@ import { CookieService } from 'ngx-cookie-service';
     InicioComponent,
     NavbarClientesComponent,
     CarouselComponent,
-    RegistroEIngresoComponent,
     FormIngresoComponent,
     FormRegistroComponent,
     NavbarProductosComponent,
     CarouselProductosComponent,
     CarritoComponent,
-    StepperClientesComponent,
-    TableDatosClientesComponent,
-    TableResumenCompraComponent,
+    VentasComponent,
+    TablaVentasComponent,
+    FormVentasComponent,
   ],
   providers: [ProductosService,CookieService ],
   bootstrap: [AppComponent]

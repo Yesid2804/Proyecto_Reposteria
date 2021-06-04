@@ -1,24 +1,30 @@
-import { Injectable } from '@angular/core';
-import { Producto } from 'app/administracion/models/producto';
-import { peticion } from "../../../serviceLocalstorage/serviceLocalStorage";
+// import { HttpClient } from '@angular/common/http';
 
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { peticion } from "../../../serviceLocalstorage/serviceLocalStorage";
+import { HttpRequestService } from "../../../services/httpRequest.service";
 @Injectable({
   providedIn: 'root'
 })
 export class ProductosService {
 
-  constructor() { }
+  private myAppUrl = 'https://localhost:44321/';
+  private entity = 'producto';
+  constructor(private http: HttpRequestService ) { }
 
-  getProductos(){
-    return peticion.obtenerLista('productos');
+  getListProductos(): Observable<any>{
+    return this.http.getEntries<any>(this.entity);
   }
-  addProducto(producto: Producto){
-    return peticion.agregarElemento('productos',producto);
-  }
-  editarProducto(producto: Producto){
-    return peticion.editartElemento('productos',producto);
-  }
-  eliminarProducto(producto: Producto){
-    return peticion.eliminar('productos',producto.id);
+
+  saveProducto(producto: any): Observable<any>{
+    return this.http.createEntry(this.entity, producto);
+ }
+
+  updateProducto(id:number, producto: any): Observable<any>{
+    return this.http.updateEntry(this.entity, id, producto)
+}
+  deleteProducto(id: number): Observable<any>{
+    return this.http.deleteEntry(this.entity, id)
   }
 }

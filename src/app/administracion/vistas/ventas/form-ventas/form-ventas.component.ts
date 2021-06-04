@@ -1,11 +1,14 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Producto } from 'app/administracion/models/producto';
-import { ProductosService } from '../productos.service';
-import Swal from 'sweetalert2'
 import { v4 as uuidv4 } from 'uuid';
-import 'sweetalert2/src/sweetalert2.scss'
+import Swal from 'sweetalert2'
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MAT_CALENDAR_RANGE_STRATEGY_PROVIDER_FACTORY } from '@angular/material/datepicker/date-range-selection-strategy';
+import { data } from 'jquery';
+import { ProductosService } from '../../productos/productos.service';
+import { Venta } from 'app/administracion/models/venta';
+
 
 declare var $: any;
 interface Food {
@@ -13,30 +16,32 @@ interface Food {
   viewValue: string;
 }
 @Component({
-  selector: 'app-form-producto',
-  templateUrl: './form-producto.component.html',
-  styleUrls: ['./form-producto.component.css'],
-  providers: [ProductosService],
+  selector: 'app-form-ventas',
+  templateUrl: './form-ventas.component.html',
+  styleUrls: ['./form-ventas.component.css']
+
 })
+export class FormVentasComponent implements OnInit {
 
-export class FormProductoComponent implements OnInit {
   templateUrl: 'select-overview-example.html'
-  titulo = "Registar producto"
+  titulo = "Registar Venta"
 
-  formProducto: Producto = {
+  formVenta: Venta = {
     id: null,
-    nombre: '',
-    categoria: '',
-    costo: null,
-    descripcion: ''
+    identificacionCliente: null,
+    idProducto: null,
+    precioUnitario: null,
+    cantidad: null,
+    totalVenta:null
   }
 
-  public listProducto: Producto[] = [];
+  public listVenta: Venta[] = [];
 
   form:FormGroup;
 
+
   constructor(
-    public dialogRef: MatDialogRef<FormProductoComponent>,
+    public dialogRef: MatDialogRef<FormVentasComponent>,
     private productoService: ProductosService,
     private fb: FormBuilder,
     @Inject(MAT_DIALOG_DATA) public dataModal: any
@@ -44,10 +49,10 @@ export class FormProductoComponent implements OnInit {
     ) { 
       this.form = this.fb.group({
         id: uuidv4(),
-        nombre:['',Validators.required],
-        categoria :['',Validators.required],
-        costo :['',Validators.required],
-        descripcion:['',[Validators.required,Validators.maxLength(100)]],
+        idCliente:['',Validators.required],
+        idProducto :['',Validators.required],
+        precio :['',Validators.required],
+        cantidad:['',[Validators.required,Validators.maxLength(100)]],
       })
     }
 
@@ -62,16 +67,16 @@ export class FormProductoComponent implements OnInit {
     ];
 
   ngOnInit(): void {
-    this.obtenerProductos();
+    this.obtenerVenta();
     if(this.dataModal.tipo !== "Agregar" ){
       this.titulo = "Editar producto"
-      this.formProducto =  this.dataModal.producto;
+      this.formVenta =  this.dataModal.producto;
     }
   }
 
-  obtenerProductos(){
+  obtenerVenta(){
     this.productoService.getListProductos().subscribe(data =>{
-      this.listProducto = data;
+      this.listVenta = data;
     },error =>{
        console.log(error)
     });
@@ -86,8 +91,8 @@ export class FormProductoComponent implements OnInit {
   }
 
   guardarProducto(){
-    if(this.dataModal.tipo !== "Agregar"){
-        this.productoService.updateProducto(this.formProducto.id,this.formProducto).subscribe(data=>{
+    if(this.dataModal.tipo !== "Agregar" ){
+        this.productoService.updateProducto(this.formVenta.id,this.formVenta).subscribe(data=>{
         this.dataModal.tipo=="Agregar";
       });
       
@@ -99,14 +104,14 @@ export class FormProductoComponent implements OnInit {
         timer: 1500
       })
     }else{
-      this.formProducto.id = uuidv4().number;
-      this.productoService.saveProducto(this.formProducto).subscribe(data=>{
+      this.formVenta.id = uuidv4().number;
+      this.productoService.saveProducto(this.formVenta).subscribe(data=>{
         Swal.fire({
           position: 'center',icon: 'success',title: 'Producto guardado correctamente',
           showConfirmButton: false,
           timer: 1500
         });
-         this.obtenerProductos();
+         this.obtenerVenta();
       }, error=>{
         console.log(console.error);   
         Swal.fire({
@@ -118,5 +123,4 @@ export class FormProductoComponent implements OnInit {
     }
     this.dialogRef.close();
   }
- 
 }

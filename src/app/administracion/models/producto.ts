@@ -1,5 +1,5 @@
 export class Producto {
-    id: string;
+    id: number;
     nombre: string;
     categoria: string;
     costo: number;

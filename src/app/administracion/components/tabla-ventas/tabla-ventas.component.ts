@@ -1,22 +1,19 @@
 import { ArrayType } from '@angular/compiler';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { ModalComponent } from '../modal/modal.component';
 
 @Component({
-  selector: 'app-tabla-domiciliario' ,
-  templateUrl: './tabla-domiciliario.component.html',
-  styleUrls: ['./tabla-domiciliario.component.css']
+  selector: 'app-tabla-ventas',
+  templateUrl: './tabla-ventas.component.html',
+  styleUrls: ['./tabla-ventas.component.css']
 })
-
-export class TablaDomiciliarioComponent implements OnInit {
+export class TablaVentasComponent implements OnInit {
   @Output() showModal = new EventEmitter<boolean>();
   @Output() showModalEditar = new EventEmitter<any>();
   @Output() eliminar = new EventEmitter<any>();
-
+  
   @Input()
   titulo = ""
-
   
   @Input()
   nombreBotonAgregar = ""
@@ -31,16 +28,17 @@ export class TablaDomiciliarioComponent implements OnInit {
   ) { }
 
   ngOnInit(
-  ): void {
-  }
+    ): void {
+    }
+  
+    openDialog() {
+      this.showModal.emit(true);
+    }
+    modalEditar(item) {
+      this.showModalEditar.emit(item);
+    }
+    remove(item) {
+      this.eliminar.emit(item);
+    }
 
-  openDialog() {
-    this.showModal.emit(true);
-  }
-  modalEditar(item) {
-    this.showModalEditar.emit(item);
-  }
-  remove(item) {
-    this.eliminar.emit(item);
-  }
 }

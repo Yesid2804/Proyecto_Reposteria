@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Domiciliario } from 'app/administracion/models/domiciliario';
+import { DomiciliarioService } from 'app/administracion/servicios/domiciliario.service';
+import Swal from 'sweetalert2';
 import { FormDomiciliarioComponent } from './form-domiciliario/form-domiciliario.component';
 
 @Component({
@@ -16,37 +19,74 @@ export class DomiciliariosComponent implements OnInit {
     {indice:'identificacion',columna:'Identificacion'},
     {indice:'salario',columna:'Salario'},
 ]
-  productos: any = [
-    {
-      indice: 1,
-      apellido: 'Gutierrez',
-      nombre: 'Juan',
-      identificacion: '1000323233',
-      salario: '$ 1100000',
-    },{
-      indice: 2,
-      apellido: 'Suarez',
-      nombre: 'Luis',
-      identificacion: '100039973',
-      salario: '$ 1100000',
-    }
-    
-  ]
-  constructor(public dialog: MatDialog) { }
+ 
+listDomiciliario: Domiciliario[] = [
+]
+
+  constructor(
+    public dialog: MatDialog,
+    private _domiciliarioService: DomiciliarioService,
+    ) { }
 
   ngOnInit(): void {
+    this.actualizarDomiciliarios();
   }
 
-  showRegistrarProducto(){
+  actualizarDomiciliarios(){
+    this._domiciliarioService.getListDomiciliarios().subscribe((data) =>{
+      this.listDomiciliario = data;
+   }, error=>{
+     console.log(error);
+   })
+  }
+
+  showRegistrarDomiciliario(){
     const dialogRef = this.dialog.open(FormDomiciliarioComponent,{
       width: '700px',
       data: {
         tipo: 'Agregar'
       }
     });
-
     dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
+      this.actualizarDomiciliarios();
     });
+  }
+
+  showEditarDomiciliario(domiciliario){
+    const dialogRef = this.dialog.open(FormDomiciliarioComponent,{
+      width: '700px',
+      data: {
+        tipo: 'Editar',
+        domiciliario
+      }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      this.actualizarDomiciliarios();
+    });
+  }
+
+  eliminar(domiciliario){
+    Swal.fire({
+      title: '¿Estas Seguro Que Desea Eliminar El Domiciliario? \n' + domiciliario.nombre + " "+ domiciliario.apellido,
+      text: "No podrás revertir esto!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Si, Borralo!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          'Eliminado!',
+          'El Domiciliario ha sido Eliminado..',
+          'success'
+        )
+        this._domiciliarioService.deleteDomiciliario(domiciliario.id).subscribe(data=>{
+          this.actualizarDomiciliarios();
+        },error =>{
+          console.log(console.error);
+        })
+      }
+    })
   }
 }

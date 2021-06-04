@@ -1,34 +1,36 @@
-
-<h2 class="titleModal col-12" style="font-family: 'Work Sans Black card-header card-header-warning'">{{titulo}} 
+<h2 class="titleModal col-12" style="font-family: 'Work Sans Black'">{{titulo}} 
     <span (click)="cerrarModal()" class="material-icons float-right bottonCerrar">clear</span>
-</h2>
-    <form>
-        <div class="row contentModal" >
-            <div class="col-md-6">
-                <mat-form-field class="example-full-width">
-                <input matInput placeholder="Nombre">
-                </mat-form-field>
-            </div>
-            <div class="col-md-6">
-                <mat-form-field class="example-full-width">
-                <input matInput placeholder="Apellido">
-                </mat-form-field>
-            </div>
+    </h2>
     
+    <form [formGroup]="form" (ngSubmit)="agregarDomiciliario()" >
+        <div class="row contentModal">
             <div class="col-md-6">
                 <mat-form-field class="example-full-width">
-                <input matInput placeholder="Identificacion">
+                <input formControlName="nombre" [(ngModel)]="formDomiciliario.nombre" name="nombre"  matInput placeholder="Nombre">
                 </mat-form-field>
-            </div>
-            <div class="col-md-6">
-                <mat-form-field class="example-full-width">
-                <input type="text" matInput placeholder="Salario" value="$">
-                </mat-form-field>
-            </div>
-
-            <div class="col-md-12">
-                <button mat-raised-button class="float-right botonAgregar" >Guardar</button>
             </div>
             
+            <div class="col-md-6">
+                <mat-form-field class="example-full-width">
+                <input formControlName="apellido" [(ngModel)]="formDomiciliario.apellido" name="apellido" type="text" matInput placeholder="Apellido">
+                </mat-form-field>
+            </div>
+
+            <div class="col-md-6">
+                <mat-form-field class="example-full-width">
+                <input formControlName="identificacion" [(ngModel)]="formDomiciliario.identificacion" name="identificacion" type="number" matInput placeholder="Identificacion">
+                </mat-form-field>
+            </div>
+            
+            <div class="col-md-6">
+                <mat-form-field class="example-full-width">
+                <input formControlName="salario" [(ngModel)]="formDomiciliario.salario" name="salario" type="number" matInput placeholder="Salario" value="$">
+                </mat-form-field>
+            </div>
+            
+            <div class="col-md-12 ">
+                <button mat-raised-button class="float-right botonAgregar" [disabled]="this.form.invalid" (click)="guardarDomiciliario()">Guardar</button>
+            </div>
         </div>
     </form>
+    

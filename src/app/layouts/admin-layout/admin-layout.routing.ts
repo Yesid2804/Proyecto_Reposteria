@@ -13,13 +13,14 @@ import { DomiciliariosComponent } from 'app/administracion/vistas/domiciliarios/
 import { ReportesComponent } from 'app/administracion/vistas/reportes/reportes.component';
 import { QuejasYReclamosComponent } from 'app/administracion/vistas/quejas-yreclamos/quejas-yreclamos.component';
 import { VigilanteGuard } from 'app/clientes/components/vigilante.guard';
+import { VentasComponent } from 'app/administracion/vistas/ventas/ventas.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'productos',      component: ProductosComponent, canActivate:[VigilanteGuard]},
     { path: 'clientes',      component: ClientesComponent},
     { path: 'quejas-yreclamos',component: QuejasYReclamosComponent},
     { path: 'domiciliarios',  component: DomiciliariosComponent},
-    { path: 'reportes',  component: ReportesComponent},
+    { path: 'ventas',        component: VentasComponent},
     { path: 'dashboard',      component: DashboardComponent},
     { path: 'user-profile',   component: UserProfileComponent},
     { path: 'table-list',     component: TableListComponent},

@@ -1,8 +1,10 @@
 <app-tabla-domiciliario
 titulo="Domiciliarios"
 nombreBotonAgregar="Agregar domiciliario"
-[data]="productos"
+[data]="listDomiciliario"
 [columns]="columns"
-(showModal)="showRegistrarProducto()"
+(showModal)="showRegistrarDomiciliario()"
+(showModalEditar)="showEditarDomiciliario($event)"
+(eliminar)="eliminar($event)"
 >
 </app-tabla-domiciliario>
