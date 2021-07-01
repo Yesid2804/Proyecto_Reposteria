@@ -30,6 +30,7 @@ export class TablaComponent implements OnInit {
     public dialog: MatDialog
   ) { }
 
+
   ngOnInit(
   ): void {
   }

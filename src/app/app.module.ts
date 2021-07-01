@@ -62,6 +62,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { VentasComponent } from './administracion/vistas/ventas/ventas.component';
 import { TablaVentasComponent } from './administracion/components/tabla-ventas/tabla-ventas.component';
 import { FormVentasComponent } from './administracion/vistas/ventas/form-ventas/form-ventas.component';
+import { UsersService } from './administracion/servicios/users.service';
 
 @NgModule({
   imports: [
@@ -114,7 +115,6 @@ import { FormVentasComponent } from './administracion/vistas/ventas/form-ventas/
     InicioComponent,
     NavbarClientesComponent,
     CarouselComponent,
-    FormIngresoComponent,
     FormRegistroComponent,
     NavbarProductosComponent,
     CarouselProductosComponent,
@@ -123,7 +123,7 @@ import { FormVentasComponent } from './administracion/vistas/ventas/form-ventas/
     TablaVentasComponent,
     FormVentasComponent,
   ],
-  providers: [ProductosService,CookieService ],
+  providers: [ProductosService,CookieService, UsersService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

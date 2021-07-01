@@ -9,7 +9,20 @@
                 <input formControlName="idCliente" [(ngModel)]="formVenta.identificacionCliente" name="idCliente"  matInput placeholder="Identificacion del Cliente">
                 </mat-form-field>
             </div>
+
+            <div class="col-md-6">
+                <mat-form-field class="example-full-width">
+                <input formControlName="nombreCliente" [(ngModel)]="formVenta.identificacionCliente" name="nombreCliente"  matInput placeholder="Nombre del Cliente">
+                </mat-form-field>
+            </div>
             
+            
+            <div class="col-md-6">
+                <mat-form-field class="example-full-width">
+                <input formControlName="precio" [(ngModel)]="formVenta.precioUnitario" name="nombreProducto"  matInput placeholder="Nombre del Producto">
+                </mat-form-field>
+            </div>
+
             <mat-form-field appearance="fill" class="col-md-6">
                 <mat-label>Categoria del  Producto</mat-label>
                 <mat-select formControlName="idProducto" [(ngModel)]="formVenta.idProducto" name="idProducto">

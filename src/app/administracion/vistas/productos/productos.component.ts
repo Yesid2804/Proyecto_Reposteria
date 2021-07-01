@@ -78,7 +78,7 @@ listProducto: Producto[] = [
       if (result.isConfirmed) {
         Swal.fire(
           'Eliminado!',
-          '¡El producto ha sido Eliminado! ',
+          '¡El producto ha sido Eliminado!',
           'success'
           )
           this._productoService.deleteProducto(producto.id).subscribe(data=>{
